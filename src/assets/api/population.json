@@ -1,0 +1,322 @@
+{
+    "Europe": {
+      "Northern Europe": [
+        {
+          "country": "Denmark",
+          "population": 5900000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Denmark",
+          "flag": "https://flagcdn.com/w320/dk.png",
+          "land_area_km2": 42924
+        },
+        {
+          "country": "Estonia",
+          "population": 1320000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Estonia",
+          "flag": "https://flagcdn.com/w320/ee.png",
+          "land_area_km2": 45339
+        },
+        {
+          "country": "Finland",
+          "population": 5600000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Finland",
+          "flag": "https://flagcdn.com/w320/fi.png",
+          "land_area_km2": 303815
+        },
+        {
+          "country": "Iceland",
+          "population": 380000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Iceland",
+          "flag": "https://flagcdn.com/w320/is.png",
+          "land_area_km2": 100250
+        },
+        {
+          "country": "Ireland",
+          "population": 5100000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Ireland",
+          "flag": "https://flagcdn.com/w320/ie.png",
+          "land_area_km2": 68890
+        },
+        {
+          "country": "Latvia",
+          "population": 1870000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Latvia",
+          "flag": "https://flagcdn.com/w320/lv.png",
+          "land_area_km2": 62249
+        },
+        {
+          "country": "Lithuania",
+          "population": 2790000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Lithuania",
+          "flag": "https://flagcdn.com/w320/lt.png",
+          "land_area_km2": 65300
+        },
+        {
+          "country": "Norway",
+          "population": 5400000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Norway",
+          "flag": "https://flagcdn.com/w320/no.png",
+          "land_area_km2": 365268
+        },
+        {
+          "country": "Sweden",
+          "population": 10500000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Sweden",
+          "flag": "https://flagcdn.com/w320/se.png",
+          "land_area_km2": 407284
+        },
+        {
+          "country": "United Kingdom",
+          "population": 67500000,
+          "wikipedia": "https://en.wikipedia.org/wiki/United_Kingdom",
+          "flag": "https://flagcdn.com/w320/gb.png",
+          "land_area_km2": 242495
+        }
+      ],
+      "Western Europe": [
+        {
+          "country": "Austria",
+          "population": 9100000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Austria",
+          "flag": "https://flagcdn.com/w320/at.png",
+          "land_area_km2": 83879
+        },
+        {
+          "country": "Belgium",
+          "population": 11600000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Belgium",
+          "flag": "https://flagcdn.com/w320/be.png",
+          "land_area_km2": 30528
+        },
+        {
+          "country": "France",
+          "population": 68000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/France",
+          "flag": "https://flagcdn.com/w320/fr.png",
+          "land_area_km2": 551695
+        },
+        {
+          "country": "Germany",
+          "population": 83000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Germany",
+          "flag": "https://flagcdn.com/w320/de.png",
+          "land_area_km2": 357022
+        },
+        {
+          "country": "Liechtenstein",
+          "population": 39000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Liechtenstein",
+          "flag": "https://flagcdn.com/w320/li.png",
+          "land_area_km2": 160
+        },
+        {
+          "country": "Luxembourg",
+          "population": 660000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Luxembourg",
+          "flag": "https://flagcdn.com/w320/lu.png",
+          "land_area_km2": 2586
+        },
+        {
+          "country": "Monaco",
+          "population": 39000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Monaco",
+          "flag": "https://flagcdn.com/w320/mc.png",
+          "land_area_km2": 2.02
+        },
+        {
+          "country": "Netherlands",
+          "population": 17500000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Netherlands",
+          "flag": "https://flagcdn.com/w320/nl.png",
+          "land_area_km2": 41543
+        },
+        {
+          "country": "Switzerland",
+          "population": 8900000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Switzerland",
+          "flag": "https://flagcdn.com/w320/ch.png",
+          "land_area_km2": 41284
+        }
+      ],
+      "Southern Europe": [
+        {
+          "country": "Albania",
+          "population": 2800000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Albania",
+          "flag": "https://flagcdn.com/w320/al.png",
+          "land_area_km2": 28748
+        },
+        {
+          "country": "Andorra",
+          "population": 79000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Andorra",
+          "flag": "https://flagcdn.com/w320/ad.png",
+          "land_area_km2": 468
+        },
+        {
+          "country": "Bosnia and Herzegovina",
+          "population": 3200000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Bosnia_and_Herzegovina",
+          "flag": "https://flagcdn.com/w320/ba.png",
+          "land_area_km2": 51197
+        },
+        {
+          "country": "Croatia",
+          "population": 3900000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Croatia",
+          "flag": "https://flagcdn.com/w320/hr.png",
+          "land_area_km2": 56594
+        },
+        {
+          "country": "Greece",
+          "population": 10300000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Greece",
+          "flag": "https://flagcdn.com/w320/gr.png",
+          "land_area_km2": 131957
+        },
+        {
+          "country": "Italy",
+          "population": 59000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Italy",
+          "flag": "https://flagcdn.com/w320/it.png",
+          "land_area_km2": 301340
+        },
+        {
+          "country": "Malta",
+          "population": 520000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Malta",
+          "flag": "https://flagcdn.com/w320/mt.png",
+          "land_area_km2": 316
+        },
+        {
+          "country": "Montenegro",
+          "population": 620000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Montenegro",
+          "flag": "https://flagcdn.com/w320/me.png",
+          "land_area_km2": 13812
+        },
+        {
+          "country": "North Macedonia",
+          "population": 1900000,
+          "wikipedia": "https://en.wikipedia.org/wiki/North_Macedonia",
+          "flag": "https://flagcdn.com/w320/mk.png",
+          "land_area_km2": 25713
+        },
+        {
+          "country": "Portugal",
+          "population": 10200000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Portugal",
+          "flag": "https://flagcdn.com/w320/pt.png",
+          "land_area_km2": 92090
+        },
+        {
+          "country": "San Marino",
+          "population": 34000,
+          "wikipedia": "https://en.wikipedia.org/wiki/San_Marino",
+          "flag": "https://flagcdn.com/w320/sm.png",
+          "land_area_km2": 61
+        },
+        {
+          "country": "Serbia",
+          "population": 6700000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Serbia",
+          "flag": "https://flagcdn.com/w320/rs.png",
+          "land_area_km2": 88361
+        },
+        {
+          "country": "Slovenia",
+          "population": 2100000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Slovenia",
+          "flag": "https://flagcdn.com/w320/si.png",
+          "land_area_km2": 20273
+        },
+        {
+          "country": "Spain",
+          "population": 48000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Spain",
+          "flag": "https://flagcdn.com/w320/es.png",
+          "land_area_km2": 505990
+        },
+        {
+          "country": "Vatican City",
+          "population": 800,
+          "wikipedia": "https://en.wikipedia.org/wiki/Vatican_City",
+          "flag": "https://flagcdn.com/w320/va.png",
+          "land_area_km2": 0.49
+        }
+      ],
+      "Eastern Europe": [
+        {
+          "country": "Belarus",
+          "population": 9400000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Belarus",
+          "flag": "https://flagcdn.com/w320/by.png",
+          "land_area_km2": 207600
+        },
+        {
+          "country": "Bulgaria",
+          "population": 6600000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Bulgaria",
+          "flag": "https://flagcdn.com/w320/bg.png",
+          "land_area_km2": 110879
+        },
+        {
+          "country": "Czech Republic",
+          "population": 10800000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Czech_Republic",
+          "flag": "https://flagcdn.com/w320/cz.png",
+          "land_area_km2": 78865
+        },
+        {
+          "country": "Hungary",
+          "population": 9600000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Hungary",
+          "flag": "https://flagcdn.com/w320/hu.png",
+          "land_area_km2": 93030
+        },
+        {
+          "country": "Moldova",
+          "population": 2600000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Moldova",
+          "flag": "https://flagcdn.com/w320/md.png",
+          "land_area_km2": 33843
+        },
+        {
+          "country": "Poland",
+          "population": 38000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Poland",
+          "flag": "https://flagcdn.com/w320/pl.png",
+          "land_area_km2": 312696
+        },
+        {
+          "country": "Romania",
+          "population": 19000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Romania",
+          "flag": "https://flagcdn.com/w320/ro.png",
+          "land_area_km2": 238397
+        },
+        {
+          "country": "Russia (European part)",
+          "population": 110000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/European_Russia",
+          "flag": "https://flagcdn.com/w320/ru.png",
+          "land_area_km2": 3970000
+        },
+        {
+          "country": "Slovakia",
+          "population": 5400000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Slovakia",
+          "flag": "https://flagcdn.com/w320/sk.png",
+          "land_area_km2": 49035
+        },
+        {
+          "country": "Ukraine",
+          "population": 41000000,
+          "wikipedia": "https://en.wikipedia.org/wiki/Ukraine",
+          "flag": "https://flagcdn.com/w320/ua.png",
+          "land_area_km2": 603628
+        }
+      ]
+    }
+
+}
+ 

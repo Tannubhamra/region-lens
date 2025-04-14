@@ -1,0 +1,8 @@
+<div class="space-y-2">
+    <p><strong>Country:</strong> {{ countryData && countryData.name }}</p>
+    <p><strong>Area:</strong> {{ countryData && countryData.area }} km²</p>
+    <p><strong>Population:</strong> {{ countryData && countryData.population }}</p>
+   <p>
+        <a [href]="countryData && countryData.wikipedia" target="_blank" class="text-blue-600 underline">Learn More</a>
+   </p> 
+  </div>
