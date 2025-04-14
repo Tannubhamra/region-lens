@@ -1,8 +1,7 @@
-<div class="p-6 max-w-7xl mx-auto">
-    <!-- Title -->
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Region Dashboard</h2>
-  
-    <!-- Toggle Button -->
+<div class="border-b-2 rounded-md mb-4">
+  <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">Region Lens</h2>
+</div>
+<div class="p-4 max-w-7xl mx-auto">
     <div class="mb-6 text-center">
         <label class="inline-flex items-center cursor-pointer">
             <span class="mr-3">Area</span><input type="checkbox" (change)="toggleData()" class="sr-only peer">
@@ -10,7 +9,6 @@
             <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300">Population</span>
           </label>
       </div> 
-    <!-- Chart -->
     <div class="w-full overflow-x-auto">
       <app-circle-pack-chart 
         [transformedChartData]="transformedData()"

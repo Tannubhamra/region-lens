@@ -1,14 +1,13 @@
 <div #drawer 
    class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-gray w-80 dark:bg-gray-800 shadow-lg bg-white" tabindex="-1" aria-labelledby="drawer-right-label">
-   <h5 class="text-base font-semibold text-gray-500 dark:text-gray-400">
-     {{ drawerTitle() }}
-   </h5>
 
    <button (click)="hideDrawer()" class="absolute top-2.5 right-2.5 text-sm w-8 h-8">
       ✕
    </button>
-
-   <div class="p-4">
+   <h5 class="text-base font-semibold text-gray-500 dark:text-gray-400 top-4">
+    {{ drawerTitle() }}
+  </h5>
+   <div class="p-4 mt-8">
       <ng-content></ng-content>
     </div>
 </div>
