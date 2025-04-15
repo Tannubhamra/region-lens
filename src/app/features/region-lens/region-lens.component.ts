@@ -1,4 +1,4 @@
-import { Component, computed, EventEmitter, inject, Input, Output, Signal, signal} from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, EventEmitter, inject, Input, Output, Signal, signal} from '@angular/core';
 import { RegionService } from './services/region.service';
 import { IRegionLens } from './interfaces/region.interface';
 import { CommonModule } from '@angular/common';
@@ -14,7 +14,8 @@ import { CountryDetailComponent } from "./components/country-detail/country-deta
   standalone:true,
   imports: [CommonModule, CirclePackChartComponent, DrawerComponent, CountryDetailComponent],
   templateUrl: './region-lens.component.html',
-  styleUrl: './region-lens.component.scss'
+  styleUrl: './region-lens.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RegionLensComponent {
   @Input() isOpen: boolean = false;
@@ -33,12 +34,14 @@ export class RegionLensComponent {
   }
 
   getAllRegions(){
-    this.regionService.getRegions().subscribe((data: IRegionLens) => {
+    this.regionService.getRegions().subscribe({
+      next : (data: IRegionLens) => {
       this.regionLensData.set(data);  
     },
-    error => {
-      console.error('Error fetching Region data:', error);
-    });
+      error : (err) =>{
+      console.error('Error fetching Region data:', err);
+    }
+  });
   }
 
   toggleData(): void {

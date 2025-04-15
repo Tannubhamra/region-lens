@@ -1,13 +1,14 @@
 
 import { CommonModule } from '@angular/common';
-import { Component, effect, ElementRef, EventEmitter, Input, Output, Signal, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, ElementRef, EventEmitter, Input, Output, Signal, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-drawer',
   imports: [CommonModule],
   templateUrl: './drawer.component.html',
   styleUrl: './drawer.component.scss',
-  standalone:true
+  standalone:true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DrawerComponent {
   @Input() drawerTitle!: Signal<string>;

@@ -9,11 +9,12 @@ import { CommonModule } from '@angular/common';
   styleUrl: './country-detail.component.scss'
 })
 export class CountryDetailComponent {
-  drawerService = inject(DrawerService);
   data = signal<any>(null);
   
+  drawerService = inject(DrawerService);
+
   get countryData() {
-    return this.data(); // assuming `data` is a signal or function returning the data
+    return this.data();
   }
 constructor() {
   effect(() => {

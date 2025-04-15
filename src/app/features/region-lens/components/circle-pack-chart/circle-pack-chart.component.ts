@@ -1,24 +1,24 @@
-import { AfterViewInit, Component, ElementRef, inject, Input, OnChanges, OnDestroy, SimpleChanges, ViewChild } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, Input, OnChanges, OnDestroy, SimpleChanges, ViewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { CommonModule } from '@angular/common';
 import { ITransformedData } from '../../interfaces/pack-chart.interface';
 import { DrawerService } from '../../../../shared/services/drawer.service';
-import { ICountry } from '../../interfaces/region.interface';
 
 @Component({
   selector: 'app-circle-pack-chart',
   imports: [CommonModule],
   templateUrl: './circle-pack-chart.component.html',
   styleUrl: './circle-pack-chart.component.scss',
-  standalone: true
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDestroy{
   @Input() transformedChartData!: ITransformedData;
   @ViewChild('tooltip', {static: true}) tooltipRef!: ElementRef<HTMLDivElement>;
   @ViewChild('chartContainer', { static: true }) chartContainerRef!: ElementRef;
   
-  private svg: any;
-  private zoomScale: number = 1;
+  private svg!: d3.Selection<SVGSVGElement, unknown, null, undefined>;
+  private zoomScale = 1;
   private chartGroup!: d3.Selection<SVGGElement, unknown, null, undefined>;
   private zoomBehavior!: d3.ZoomBehavior<SVGSVGElement, unknown>;
   private currentTransform = d3.zoomIdentity;
@@ -140,7 +140,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
       .style('font-size', '10px');
 
 
-    node.on('mouseover', (event:MouseEvent, d: any) => {
+    node.on('mouseover', (_:MouseEvent, d: any) => {
     const data = d.data;
 
     tooltip
@@ -219,7 +219,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
   ngOnDestroy() {
     window.removeEventListener('resize', this.onResize);
   }
- 
+  // for responsive charts
   private onResize = () => {
     this.createSvg();
     this.drawChart();
