@@ -96,82 +96,15 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     const height = container.clientHeight || width;
 
     const root = this.createHierarchy(this.transformedChartData);
+    const data = this.createPackedLayout(root, width, height);
 
-    // const root = d3
-    // .hierarchy(this.transformedChartData)
-    // // .result is for toggle population/area
-    // .sum((d) => 'result' in d && typeof d.result === 'number' ? d.result : 1)
-    // .sort((a, b) => b.value! - a.value!); 
+    this.clearChart();
 
-    // const pack = d3.pack<ITransformedData>()
-    //       .size([width, height])
-    //       .padding(4);
-    // const data = pack(root);
-
-   const data = this.createPackedLayout(root, width, height);
-
-   //  this.chartGroup.selectAll('*').remove();
-   this.clearChart();
-
-   const filteredDescendants = this.filterVisibleNodes(data);
-
-  //  const filteredDescendants = data
-  // .descendants()
-  // .filter((d) => this.legendsVisibleDepths.get(d.depth) !== false);
-
-   const nodes = this.renderNodes(filteredDescendants);
-
-  //  const node = this.chartGroup
-  //  .selectAll('g')
-  //  .data(filteredDescendants)
-  //  .enter()
-  //  .append('g')
-  //  .attr('transform', (d) => `translate(${d.x},${d.y})`);
-
-  //  node
-  //  .append('circle')
-  //  .attr('r', (d) => d.r)
-  //  .attr('fill', (d) => this.getColorByDepth(d.depth))
-  //  .attr('stroke', '#333')
-  //  .on('click', (_event, d) => {
-  //   if (d.depth === 0) return; 
-  //   this.showCountryDetails(d.data)
-  //  });
-
-   this.renderCircles(nodes);
-
-    // country Labels
-    // node
-    //   .filter((d) => d.depth === 3 || d.depth === 0)
-    //   .append('text')
-    //   .text((d) => d.data.name)
-    //   .attr('text-anchor', 'middle')
-    //   .attr('dy', '.2em')
-    //   .style('fill', 'white')
-    //   .style('pointer-events', 'none')
-    //   .style('font-size', '10px');
-
-      this.renderLabels(nodes);
-
-
-    // node.on('mouseover', (_:MouseEvent, d: IChartNode) => {
-    // const data = d.data;
-
-    // tooltip
-    //   .classed('hidden', false)
-    //   .html(`
-    //     <strong>${data.name}</strong>
-    //   `);
-    // })
-    // .on('mousemove', (event: MouseEvent) => {
-    //   tooltip
-    //     .style('left', `${event.pageX}px`)
-    //     .style('top', `${event.pageY}px`);
-    // })
-    // .on('mouseout', () => {
-    //   tooltip.classed('hidden', true);
-    // });
-
+    const filteredDescendants = this.filterVisibleNodes(data);
+    const nodes = this.renderNodes(filteredDescendants);
+ 
+    this.renderCircles(nodes);
+    this.renderLabels(nodes);
     this.addInteractions(nodes, tooltip);
   }
   
@@ -276,7 +209,6 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     return colors[depth] || ChartColor.DEFAULT;
   }
 
-
   resetZoom(): void {
     const svgElement = this.svg.node() as SVGSVGElement;
   
@@ -312,7 +244,6 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
       .transition()
       .duration(300)
       .call(this.zoomBehavior.transform, newTransform);
-
   }
 
   // for responsive charts

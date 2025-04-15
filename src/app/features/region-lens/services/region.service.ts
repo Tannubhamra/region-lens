@@ -8,7 +8,6 @@ import { IRegionLens } from "../interfaces/region.interface";
   })
 
 export class RegionService {
-
     private apiUrl = 'assets/api/population.json';
     private http = inject(HttpClient);
 

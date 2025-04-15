@@ -1,4 +1,4 @@
-import { Component, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { DrawerService } from '../../../../shared/services/drawer.service';
 import { CommonModule } from '@angular/common';
 
