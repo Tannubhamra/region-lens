@@ -3,6 +3,7 @@ import { ITransformedCountry, ITransformedData, ITransformedRegion, ITransformed
 
 export type ValueMode = 'population' | 'area';
 
+
 export function transformRegionLensToPackData(
   regionLens: IRegionLens = {},
   mode: ValueMode

@@ -10,7 +10,7 @@
         <ng-container *ngFor="let item of legendItems">
             <div 
               class="flex items-center gap-2 cursor-pointer"
-              (click)="toggleDepthVisibility(item.depth)"
+              (click)="toggleLegendsDepthVisibility(item.depth)"
               [class.opacity-50]="!legendsVisibleDepths.get(item.depth)"
             >
               <div 

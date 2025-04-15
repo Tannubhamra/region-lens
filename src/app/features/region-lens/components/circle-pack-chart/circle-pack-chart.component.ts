@@ -160,7 +160,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     });
   }
 
-  toggleDepthVisibility(depth: number): void {
+  toggleLegendsDepthVisibility(depth: number): void {
     const current = this.legendsVisibleDepths.get(depth) ?? true;
     this.legendsVisibleDepths.set(depth, !current);
     this.drawChart();
@@ -169,6 +169,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
   showCountryDetails(data: ITransformedData) {
 
     if ( data.children) return; // stop click on region
+    console.log('show drawer')
     this.drawerService.openDrawer('Country Info', data);
   }
  
