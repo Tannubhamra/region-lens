@@ -4,29 +4,29 @@
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔄 **Toggle Between Population and Area**  
+- **Toggle Between Population and Area**  
   Switch the visualization metric using the top toggle – choose between **population** or **land area**.
 
-- 📊 **Pack Chart Visualization**  
+- **Pack Chart Visualization**  
   D3-based bubble chart displays countries grouped by region. Bubbles dynamically scale based on the selected metric.
 
-- 🧭 **Interactive Country Drawer**  
+- **Interactive Country Drawer**  
   Click on a country bubble to open a side drawer showing:
   - Country name
   - Population
   - Area
   - A direct **Wikipedia link** for more info
 
-- 🟢 **Legend with Region Filters**  
+- **Legend with Region Filters**  
   Color-coded **legends are clickable** – toggle region visibility in the chart dynamically.
 
-- 🔍 **Zoom & Pan Support**
+- **Zoom & Pan Support**
   - Move the chart freely with drag
   - Use **zoom in**, **zoom out**, and **reset zoom** controls to navigate
 
-- ⚡ **Modern Angular Architecture**
+- **Modern Angular Architecture**
   - Standalone Components
   - Angular Signals & Signal Store
   - Lazy loading for features
@@ -34,7 +34,7 @@
 
 ---
 
-## 🧠 Smart Data Transformation
+## Smart Data Transformation
 
 The `transformedData()` function processes incoming data in a **region-agnostic** way. That means:
 
@@ -44,9 +44,9 @@ This makes Region Lens highly **scalable** and **future-proof**.
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
-- Angular 17+
+- Angular 19
 - TypeScript
 - D3.js v7+
 - Tailwind CSS
