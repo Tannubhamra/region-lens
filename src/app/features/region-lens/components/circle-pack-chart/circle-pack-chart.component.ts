@@ -1,7 +1,7 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, inject, Input, OnChanges, OnDestroy, SimpleChanges, ViewChild } from '@angular/core';
 import * as d3 from 'd3';
 import { CommonModule } from '@angular/common';
-import { ITransformedData } from '../../interfaces/pack-chart.interface';
+import { ITransformedData, IChartNode } from '../../interfaces/pack-chart.interface';
 import { DrawerService } from '../../../../shared/services/drawer.service';
 
 @Component({
@@ -96,11 +96,12 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     const height = container.clientHeight || width;
 
     const root = d3
-    .hierarchy(this.transformedChartData as any)
-    .sum((d: any) => d.result || 1)  // .result is for toggle population/area
+    .hierarchy(this.transformedChartData)
+    // .result is for toggle population/area
+    .sum((d) => 'result' in d && typeof d.result === 'number' ? d.result : 1)
     .sort((a, b) => b.value! - a.value!); 
 
-    const pack = d3.pack()
+    const pack = d3.pack<ITransformedData>()
           .size([width, height])
           .padding(4);
     const data = pack(root);
@@ -109,30 +110,30 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
 
    const filteredDescendants = data
   .descendants()
-  .filter((d: any) => this.legendsVisibleDepths.get(d.depth) !== false);
+  .filter((d) => this.legendsVisibleDepths.get(d.depth) !== false);
 
    const node = this.chartGroup
    .selectAll('g')
    .data(filteredDescendants)
    .enter()
    .append('g')
-   .attr('transform', (d: any) => `translate(${d.x},${d.y})`);
+   .attr('transform', (d) => `translate(${d.x},${d.y})`);
 
    node
    .append('circle')
-   .attr('r', (d: any) => d.r)
-   .attr('fill', (d: any) => this.getColorByDepth(d.depth))
+   .attr('r', (d) => d.r)
+   .attr('fill', (d) => this.getColorByDepth(d.depth))
    .attr('stroke', '#333')
-   .on('click', (_event: any, d: any) => {
+   .on('click', (_event, d) => {
     if (d.depth === 0) return; 
     this.showCountryDetails(d.data)
    });
 
     // country Labels
     node
-      .filter((d: any) => d.depth === 3 || d.depth === 0)
+      .filter((d) => d.depth === 3 || d.depth === 0)
       .append('text')
-      .text((d: any) => d.data.name)
+      .text((d) => d.data.name)
       .attr('text-anchor', 'middle')
       .attr('dy', '.2em')
       .style('fill', 'white')
@@ -140,7 +141,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
       .style('font-size', '10px');
 
 
-    node.on('mouseover', (_:MouseEvent, d: any) => {
+    node.on('mouseover', (_:MouseEvent, d: IChartNode) => {
     const data = d.data;
 
     tooltip
@@ -165,7 +166,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     this.drawChart();
   }
 
-  private showCountryDetails(data: any) {
+  showCountryDetails(data: ITransformedData) {
 
     if ( data.children) return; // stop click on region
     this.drawerService.openDrawer('Country Info', data);
