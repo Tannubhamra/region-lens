@@ -3,7 +3,6 @@ import { Injectable, signal } from '@angular/core';
 @Injectable({ providedIn: 'root' })
 
 export class DrawerService {
-  // Signal to track if the drawer is open
   drawerTitle = signal<string>('');
   drawerContent = signal<any | null>(null);
   isOpen = signal(false);
