@@ -65,7 +65,7 @@ describe('CirclePackChartComponent', () => {
     // Initially visible
     expect(component.legendsVisibleDepths.get(2)).toBeTrue();
   
-    component.toggleDepthVisibility(2);
+    component.toggleLegendsDepthVisibility(2);
   
     // Should now be hidden
     expect(component.legendsVisibleDepths.get(2)).toBeFalse();

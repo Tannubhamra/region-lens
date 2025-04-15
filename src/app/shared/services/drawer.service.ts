@@ -9,9 +9,9 @@ export class DrawerService {
   isOpen = signal(false);
 
   openDrawer(title: string, content: any) {
+    this.isOpen.set(true);
     this.drawerTitle.set(title);
     this.drawerContent.set(content);
-    this.isOpen.set(true);
   }
 
   closeDrawer() {
