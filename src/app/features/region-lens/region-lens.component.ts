@@ -8,6 +8,7 @@ import { ITransformedData } from './interfaces/pack-chart.interface';
 import { DrawerComponent } from "../../shared/components/drawer/drawer.component";
 import { DrawerService } from '../../shared/services/drawer.service';
 import { CountryDetailComponent } from "./components/country-detail/country-detail.component";
+import { ToggleValue } from './enums';
 
 @Component({
   selector: 'app-region-lens',
@@ -22,9 +23,8 @@ export class RegionLensComponent {
   @Input() data: any;
   @Output() close = new EventEmitter<void>();
 
-  regionLensData = signal<IRegionLens>({});
-  mode: ValueMode = 'population'; 
-  valueMode = signal<ValueMode>('population');
+  regionLensData = signal<IRegionLens | undefined>(undefined);
+  valueMode = signal<ValueMode>(ToggleValue.POPULATION);
 
   private regionService = inject(RegionService);
   drawerService = inject(DrawerService);
@@ -35,17 +35,17 @@ export class RegionLensComponent {
 
   getAllRegions(){
     this.regionService.getRegions().subscribe({
-      next : (data: IRegionLens) => {
-      this.regionLensData.set(data);  
-    },
-      error : (err) =>{
-      console.error('Error fetching Region data:', err);
-    }
-  });
+        next : (data: IRegionLens) => {
+        this.regionLensData.set(data);  
+      },
+        error : (err) =>{
+        console.error('Error fetching Region data:', err);
+      }
+    });
   }
 
   toggleData(): void {
-    this.valueMode.set(this.valueMode() === 'population' ? 'area' : 'population');
+    this.valueMode.set(this.valueMode() === ToggleValue.POPULATION ? ToggleValue.AREA : ToggleValue.POPULATION);
   }
 
   transformedData: Signal<ITransformedData> = computed(() =>

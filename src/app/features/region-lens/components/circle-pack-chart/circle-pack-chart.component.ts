@@ -186,7 +186,7 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
       .on('mousemove', (event: MouseEvent) => {
         tooltip
           .style('left', `${event.pageX}px`)
-          .style('top', `${event.pageY}px`);
+          .style('top', `${event.pageY - 150}px`);
       })
       .on('mouseout', () => {
         tooltip.classed('hidden', true);
@@ -199,8 +199,9 @@ export class CirclePackChartComponent implements AfterViewInit, OnChanges, OnDes
     this.drawChart();
   }
 
-  showCountryDetails(data: ITransformedData) {
+  showCountryDetails(data: any) {
     if ( data.children) return; // stop click on region
+ 
     this.drawerService.openDrawer('Country Info', data);
   }
  

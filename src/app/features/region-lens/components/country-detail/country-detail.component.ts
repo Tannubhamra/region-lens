@@ -1,21 +1,18 @@
 import { Component, effect, inject, signal } from '@angular/core';
 import { DrawerService } from '../../../../shared/services/drawer.service';
 import { CommonModule } from '@angular/common';
+import { ITransformedCountry } from '../../interfaces/pack-chart.interface';
 
 @Component({
   selector: 'app-country-detail',
   imports: [CommonModule],
   templateUrl: './country-detail.component.html',
-  styleUrl: './country-detail.component.scss'
+  styleUrl: './country-detail.component.scss',
 })
 export class CountryDetailComponent {
-  data = signal<any>(null);
-  
+  data = signal<ITransformedCountry | null>(null);
   drawerService = inject(DrawerService);
 
-  get countryData() {
-    return this.data();
-  }
 constructor() {
   effect(() => {
     this.data.set(this.drawerService.drawerContent())
